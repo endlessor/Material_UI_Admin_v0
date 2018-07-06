@@ -1,0 +1,117 @@
+<!DOCTYPE html><!--if lt 8html.no-js.lt-ie8--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta charset="utf-8"><!-- if IEmeta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')--><title></title><meta name="description" content=""><meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- stylesheets--><link href="assets/css/bootstrap.min.css" rel="stylesheet"><link href="assets/css/docs.min.css" rel="stylesheet"><link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet"><link href="assets/css/main.css" rel="stylesheet"></head><body data-spy="scroll"><header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner"><div class="container"><div class="navbar-header"><button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="http://iarouse.com/" target="_blank">iArouse</a></div><nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"><ul class="nav navbar-nav"><li class="active"><a href="./index.html">Getting Started</a></li></ul></nav></div></header><div class="bs-docs-header" id="content"><div class="container"><h1>Getting started</h1><p>An overview of the admin template, how to use, and more</p></div></div><div class="container bs-docs-container"><div class="row"><div class="col-md-9" role="main"><div class="bs-docs-section"><a href="https:/themeforest.net/user/arousing" target="_blank"><img style="z-index: 1100; position: fixed; top: 0; right: 0; border: 0;" src="assets/img/contact_me.png" alt="contact me"></a><h2 class="page-header" id="thanks">Thank You</h2><section><p class="lead">Thank you for purchasing!</p><p class="lead">Feel free to <a href="https:/themeforest.net/user/arousing" target="_blank">contact me</a> if you have any questions.</p><P class="lead">Also, <a href="https:/themeforest.net/user/arousing" target="_blank">email me</a> if you have any feature requests or advices, I'll be glad to know.</P></section><h2 class="page-header" id="intro">Introduction</h2><section><p class="lead">Material is a fully responsive admin web App built with Bootstrap & ReactJS. It uses Sass CSS which makes it easy to modify.</p></section><h2 class="page-header" id="file_structure">File Structure</h2><section><p class="lead">Within the download you'll find the following file structure and contents</p><p>Once downloaded, unzip the compressed folder  and you'll see something like this:</p><pre class="prettyprint">material/
+├── material/                       ───> Contains the development version of Material Admin Template.
+│   ├── config/                        └──> Configuration files of Webpack
+│   ├── public/                        └──> Static files which are copied into the /dist folder
+│   │     ├── vendors/                        └──> Third party libaries
+│   │     ├── favicon.ico
+│   │     └── index.html
+│   ├── src/                           └──> All front end files are in this folder.
+│   │     ├── actions/                        └──> Redux actions "http://redux.js.org/docs/basics/Actions.html"
+│   │     ├── assets/                         └──> All the assets, including images, fonts
+│   │     ├── components/                     └──> React components
+│   │     ├── constants/                      
+│   │     ├── containers/                     └──> React containers
+│   │     ├── reducers/                       └──> Redux reducers "http://redux.js.org/docs/basics/Reducers.html"
+│   │     ├── routes/                         └──> Page/screen components along with the routing information
+│   │     ├── stores/                         └──> React store "http://redux.js.org/docs/basics/Store.html"
+│   │     ├── styles/                         └──> All the custom stylesheets (Scss files)
+│   │     └── client.js
+│   ├── .babelrc
+│   ├── package-lock.json
+│   ├── package.json
+│   └── webpack.config.js
+├── CHANGELOG.md                   ───> The change log
+├── dist/                          ───> The distribution (production) version of Material Admin
+├── documentation/                 ───> The help documentation
+├── landing/                       ───> The landing page template
+└── Preview.png                    ───> The preview image</pre><p class="lead">Introduction to some important files:</p><dl class="dl-horizontal"><dt>package.json</dt><dd> is the JSON file of <a href="http://npmjs.com/">NPM</a> (You can click the link to know more).
+ This file is used by npm to store metadata for projects published as <a href="https://npmjs.org/">npm</a> modules.</dd><dt>package-lock.lock</dt><dd>is for NPM users, so that others can get precisely the same dependencies.</dd><dt>webpack.config.js</dt><dd>is for Webpack, look in <em>Material/config</em> folder for more</dd></dl></section><h2 class="page-header" id="demo">How to Run the Demo?</h2><div class="callout callout-warning"><p>Note: <em>dist/ </em>folder contains the built distribution (production) version, which is for demo purpose only</p></div><section><p class="lead">You need to put the files on a server to run it. Here we told about how to build a server locally.</p><div class="callout callout-info"><p><em>You can build a locally server using WAMP or MAMP (if you uses PHP). Also it's pretty easy to build one with Python or Ruby (if you prefer Python or Ruby). And here we'll build a local server with NodeJS</em></p></div><p> <strong>Preparation:</strong></p><P>You'll need to install <a href="http://nodejs.org/">Node.js >=v6.5.0</a> (NPM comes along with it) and <a href="https://github.com/cloudhead/node-static">node-static</a> (a NPM package)</P><br><p><strong>Steps:</strong></p><p>It's easy if you are familiar with Node. <a href="http://nodejs.org/" target="_blank">Download Node.js here</a>  then install it, and install <a href="https://github.com/cloudhead/node-static">node-static package</a> with one command line</p><pre>$ npm install -g node-static</pre><p>The usage of node-static is simple. Just enter the "dist" directory with command line</p><pre>$ cd dist/</pre><p>and type:</p><pre>$ static</pre><p>It'll return something like this: </p><pre>serving "." at http://127.0.0.1:8080</pre><p>Then you can view the template on <code>http://127.0.0.1:8080</code> with your browser</p><div class="callout callout-info"><p>Note: Because the dist/ folder built with webpack uses absolute path, you need to run it from root path, if not, please compile a new <em>dist/</em> with a new publicPath variable and run `npm run build`.</p></div></section><h2 class="page-header" id="use"> How to Use It?</h2><section><p class="lead">In order to do development with it, first you'll need have the following tools installed:</p><div class="callout callout-info"><p>These tools are for development purpose only, you don't need them in production environment, meaning you can use any back-end languages you like, NodeJS is just one of the options, not required</p></div><li> <a href="http://nodejs.org/">Node.js >=v6.5.0</a> (NPM comes along with it), just download and install it, that's it.</li><li><a href="https://www.ruby-lang.org/en/">Ruby </a>(if you are using a Mac, you already have it), <a href="http://sass-lang.com/">Sass </a> for Scss CSS.</li><br><p class="lead">A few steps to get started:</p><p>1. Enter "material" folder with your command line tool.</p><p>2. Install all the NPM packages with command: </p><pre>$ cd material</pre><pre>$ npm install</pre><p>3. Then type<strong> npm start</strong> and you are ready to go :)</p><pre>$ npm start</pre><p>4. It will automatically open the web app with your default browser</p><br><div class="callout callout-info"><p>Note: All the source code for development are inside <strong>./material/src/</strong> folder.</p></div></section><h2 class="page-header" id="webpack">Webpack</h2><section><p class="lead"><a href="https://webpack.js.org/">Webpack</a> is a bundler for javascript and friends. Material Admin uses it for bundling</p><div class="callout callout-warning"><p>Check out <a href="https://webpack.js.org/" target="_blank">Webpack guide</a> to get up and running.</p></div><dl class="dl-horizontal"><dt>webpack.config.js</dt><dd>is the configuration file for Webpack, look in ./config folder for more</dd><dt>package.json</dt><dd> is the JSON file of <a href="http://npmjs.com/">NPM</a>. This file stores all the packages used by Webpack</dd></dl><p>If you want to know more about the NPM packages, you can <a href="https://www.npmjs.com/">search</a> for more information</p><pre> "devDependencies": {
+    "autoprefixer": "^7.1.3",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-istanbul": "^4.1.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-airbnb": "^2.0.0",
+    "babel-preset-es2015-native-modules": "^6.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "bootstrap": "~4.0.0-beta",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.0.1",
+    "file-loader": "^0.11.2",
+    "glob": "^7.1.2",
+    "node-sass": "^4.5.3",
+    "null-loader": "^0.1.1",
+    "phantomjs-prebuilt": "^2.1.15",
+    "postcss-loader": "^2.0.5",
+    "rimraf": "^2.6.1",
+    "sass-lint": "^1.11.1",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.8",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.4.5"
+ }</pre></section><section id="layouts"><div class="page-header"><h1>Layouts & Color Schemes</h1></div><p class="lead">You can simply update a few variables to change the default settings.</p><p>Open <code>material/src/constants/Config.js</code> file, you'll find following code. You can change the value to update the default settings.</p><pre class="prettyprint linenums">const APPCONFIG = {
+    brand: 'Material',
+    user: 'Lisa',
+    year: year,
+    productLink: 'https://themeforest.net/user/arousing/portfolio',
+    AutoCloseMobileNav: true,                           // true, false. Automatically close sidenav on route change (Mobile only)
+    color: {
+        primary:    '#00BCD4',
+        success:    '#8BC34A',
+        info:       '#66BB6A',
+        infoAlt:    '#7E57C2',
+        warning:    '#FFCA28',
+        danger:     '#F44336',
+        text:       '#3D4051',
+        gray:       '#EDF0F1'
+    },
+    settings: {
+        layoutBoxed: false,                             // true, false
+        navCollapsed: false,                            // true, false
+        navBehind: false,                               // true, false
+        fixedHeader: true,                              // true, false
+        sidebarWidth: 'middle',                         // small, middle, large 
+        colorOption: '32',                              // String: 11,12,13,14,15,16; 21,22,23,24,25,26; 31,32,33,34,35,36
+        theme: 'light',                                 // light, gray, dark
+    }
+}                            </pre><p>For example you want to set "boxed" layout as default, then you can update code like so:</p><style type="text/css">.prettyprint.tohightlight ol.linenums > li:nth-child(18) { background-color: rgba(0,0,0,.1);}</style><pre class="prettyprint linenums tohightlight">const APPCONFIG = {
+    brand: 'Material',
+    user: 'Lisa',
+    year: year,
+    productLink: 'https://themeforest.net/user/arousing/portfolio',
+    AutoCloseMobileNav: true,                           // true, false. Automatically close sidenav on route change (Mobile only)
+    color: {
+        primary:    '#00BCD4',
+        success:    '#8BC34A',
+        info:       '#66BB6A',
+        infoAlt:    '#7E57C2',
+        warning:    '#FFCA28',
+        danger:     '#F44336',
+        text:       '#3D4051',
+        gray:       '#EDF0F1'
+    },
+    settings: {
+        layoutBoxed: true,                              // true, false
+        navCollapsed: false,                            // true, false
+        navBehind: false,                               // true, false
+        fixedHeader: true,                              // true, false
+        sidebarWidth: 'middle',                         // small, middle, large 
+        colorOption: '32',                              // String: 11,12,13,14,15,16; 21,22,23,24,25,26; 31,32,33,34,35,36
+        theme: 'light',                                 // light, gray, dark
+    }
+}                                      </pre><p>Done and enjoy :)</p></section><section id="resources"><div class="page-header"><h1>Resources</h1></div><p class="lead">A few resources may help: </p><ul><li><a href="https://material.io/">Material design guidelines</a></li><li> <a href="https://github.com/facebook/react">ReactJS website</a></li><li><a href="http://www.material-ui.com/">Material-ui website</a></li><li><a href="https://webpack.js.org/">Webpack website</a></li></ul></section></div></div><div class="col-md-3" role="complementary"><nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"><ul class="nav bs-docs-sidenav"><li><a href="#thanks">Thanks</a></li><li><a href="#intro">Introduction</a></li><li><a href="#file_structure">File Structure</a></li><li><a href="#demo">How to Run the Demo?</a></li><li><a href="#use">How to Use It? (As a Developer)</a></li><li><a href="#webpack">Webpack</a></li><li><a href="#layouts">Layouts & Color Schemes    </a></li><li><a href="#resources">Resources</a></li></ul><a class="back-to-top" href="#top">Back to top</a></nav></div></div></div><!-- Footer--><footer class="bs-docs-footer" role="contentinfo"><div class="container text-center"><p>Copyright <span id="copyright"></span> <a href="http://iarouse.com/">iArouse</a></p></div></footer><!-- Scripts--><script src="assets/js/jquery.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/docs.min.js"></script><script src="assets/js/ie10-viewport-bug-workaround.js"></script><script src="assets/js/google-code-prettify/prettify.js"></script><script src="assets/js/jquery.smooth-scroll.js"></script><script>$('.bs-docs-sidenav a').smoothScroll();
+window.prettyPrint && prettyPrint();</script></body></html>

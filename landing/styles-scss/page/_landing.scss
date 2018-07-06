@@ -1,0 +1,292 @@
+$theme_dark_text_color:       rgba(255,255,255,.7);
+
+
+/*==========  page  ==========*/
+
+
+.main-content {
+    overflow: hidden; // fix overflow issue caused by animate.css
+}
+
+.hero {
+    position: relative;
+    border: 0;
+    color: #fff;
+    color: rgba(255,255,255,.8);
+    text-align: center;
+    padding: 80px 0 0;
+    background-color: $dark_bg;
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        padding: 130px 0 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        margin-bottom: 20px;
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            font-size: 2.8rem;
+            line-height: 3rem;
+            margin-bottom: 32px;
+        }
+    }
+
+    p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 16px;
+        opacity: .7;
+    }
+
+    .btn-cta {
+        margin: 3rem 0 0;
+        letter-spacing: 0.8px;
+        font-size: 14px;
+        min-width: 220px;
+        padding: 1em;
+        color: #f5f5f5;
+        color: rgba(255,255,255,.85);
+    }
+
+    .img {
+        margin-top: 50px;
+        width: 100%;
+        padding: 0;
+        img {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    }
+}
+#hero {
+    background-color: $dark;
+}
+
+
+
+
+// Fade carousel instead of slide
+// http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+.testimonials {
+    background-color: $dark-light;
+    padding: 80px 0 45px;
+    color: $theme_dark_text_color;
+
+    .carousel {
+        padding-bottom: 80px;
+        max-width: map-get($grid-breakpoints, md);
+        margin: 0 auto;
+    }
+
+    .carousel-indicators li {
+        border-width: 2px;
+        opacity: .5;
+        &.active {
+            opacity: .7;
+        }
+    }
+}
+
+// 
+.features {
+    padding: 80px 0 80px;
+    border-bottom: 1px solid #eaeaea;
+
+    > header {
+        padding: 0 20px;
+        margin-bottom: 60px;
+    }
+
+    header h3 {
+        text-transform: uppercase;
+    }
+
+    .icon-box {
+        margin-top: 40px;
+        .ibox-icon .fa {
+            font-size: 38px;
+            line-height: 48px;
+        }
+    }
+}
+
+.feature-callouts {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.newsletter {
+    position: relative;
+    background-color: $dark_bg;
+    padding: 150px 0;
+    text-align: center;
+    color: #eee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.15);
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba($dark, .3);
+    }
+
+    > div {
+        position: relative;
+        z-index: 2;
+    }
+    h2 {
+        position: relative;
+        text-align: center;
+        font-size: 36px;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #f1f1f1;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+
+
+    form {
+        padding: 0 15px;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .ui-input-group {
+        > input,
+        > textarea {
+            border-bottom: 2px solid;
+            color: $bright;
+
+        }
+        > label {
+            color: $bright;
+        }
+    }
+
+    .btn {
+        margin-top: 30px;
+        font-size: 14px;
+        min-width: 220px;
+        padding: 1em;
+        color: #f5f5f5;
+        color: rgba(255,255,255,.85);
+    }
+}
+
+
+.faq {
+    background-color: $bg_section_faq;
+    padding: 7em 2em 5em;
+
+    ul.faq-list {
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+        margin-bottom: 1.6em;
+        padding: 1em 1em;
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            padding: 1em 3em;
+        }
+        @media (min-width: 47.5em) {
+            width: 49%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+
+    h4 {
+        margin-bottom: .6em;
+        font-size: 21px;
+        line-height: 1.6em;
+    }
+
+    .faq-a {
+        font-family: $font-family-serif;
+        font-size: 16px;
+        line-height: 1.6em;
+    }
+}
+
+
+.action-call {
+    padding: 4em 1em;
+    background-color: $brand-primary;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 25px;
+    color: $bright;
+    .btn {
+        font-size: 16px;
+        margin: 1em 0 1em 15px;
+        background-color: #fff;
+        color: $brand-primary;
+        .zmdi {
+            margin-left: 10px; 
+        }
+        &:hover {
+            .zmdi {
+                animation: move-arrow 1000ms ease-in-out infinite;
+            }
+        }        
+    }
+}
+
+// 
+.footer {
+    position: relative;
+    color: #7a859e;
+    position: relative;
+    background-color: $dark_bg;
+    padding: 30px 0;
+    font-size: 12px;
+}

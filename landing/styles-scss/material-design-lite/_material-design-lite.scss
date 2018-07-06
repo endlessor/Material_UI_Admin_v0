@@ -1,0 +1,18 @@
+// only code in variables file is changed
+// keep other files almost the same so that upgrade will be easy, changes:
+// * remove @import variables, mixins
+// * remove comments
+
+@import "color-definitions";
+@import "functions";
+
+// Variables and mixins
+@import "variables";
+@import "mixins";
+
+// Components
+@import "typography";
+@import "badge";
+@import "card";
+@import "data-table";
+@import "shadow";
